@@ -1,17 +1,16 @@
 let spinner = (function () {
   var count = 0;
   function updateValue(val) {
-    return val + count;
+    count = val + count;
   }
   return {
     up: function () {
-      return updateValue(1);
+      updateValue(1);
+      console.log(count);
     },
     down: function () {
-      return updateValue(-1);
-    },
-    getValue: function () {
-      return count;
+      updateValue(-1);
+      console.log(count);
     },
   };
 })();
