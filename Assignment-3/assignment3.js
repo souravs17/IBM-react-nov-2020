@@ -8,9 +8,12 @@ function Counter(count) {
     console.log(this.count);
   };
   this.down = function () {
-    this.updateValue(1);
+    this.updateValue(-1);
     console.log(this.count);
   };
 }
 
 let spinner = new Counter(5);
+spinner.up();
+spinner.up();
+spinner.down();
