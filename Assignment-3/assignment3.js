@@ -1,15 +1,15 @@
 function Counter(count) {
-  this.count = count;
-  this.updateValue = function (val) {
-    this.count = val + this.count;
+  var count = 0;
+  updateValue = function (val) {
+    count = val + count;
   };
   this.up = function () {
-    this.updateValue(1);
-    console.log(this.count);
+    updateValue(1);
+    console.log(count);
   };
   this.down = function () {
-    this.updateValue(-1);
-    console.log(this.count);
+    updateValue(-1);
+    console.log(count);
   };
 }
 
