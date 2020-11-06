@@ -15,6 +15,14 @@ const categoryActionCreators = {
     const action = { type: "SET_SELECTED_CATEGORY", payload: category };
     return action;
   },
+  load() {
+    return function (dispatch) {
+      categoriesApi.getAll().then(function (categories) {
+        const action = { type: "INIT_CATEGORIES", payload: categories };
+        dispatch(action);
+      });
+    };
+  },
 };
 
 export default categoryActionCreators;

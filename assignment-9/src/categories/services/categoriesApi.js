@@ -6,9 +6,9 @@ function getAll() {
   return axios.get(endpoint).then((response) => response.data);
 }
 
-function getById(id) {
-  return axios.get(`${endpoint}/${id}`).then((response) => response.data);
-}
+// function getById(id) {
+//   return axios.get(`${endpoint}/${id}`).then((response) => response.data);
+// }
 
 function save(categoryData) {
   if (categoryData.id === 0) {
@@ -20,15 +20,15 @@ function save(categoryData) {
   }
 }
 
-function remove(categoryData) {
-  return axios
-    .delete(`${endpoint}/${categoryData.id}`)
-    .then((response) => response.data);
-}
+// function remove(categoryData) {
+//   return axios
+//     .delete(`${endpoint}/${categoryData.id}`)
+//     .then((response) => response.data);
+// }
 
 export default {
   getAll,
-  getById,
+  //   getById,
   save,
-  remove,
+  //   remove,
 };
